@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Libros</title>
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <h1>📚 Mis Libros</h1>
+  <p class="contador">Has leído <span id="leidos">0</span> de <span id="total">0</span> libros</p>
+
+  <!-- Formulario para añadir un libro -->
+  <form id="formulario">
+    <input type="text" id="titulo" placeholder="Título" required>
+    <input type="text" id="autor" placeholder="Autor" required>
+    <button type="submit">Añadir</button>
+  </form>
+
+  <!-- Aquí JavaScript pinta los libros -->
+  <div id="lista"></div>
+
+  <!-- type="module" para poder usar import/export -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
