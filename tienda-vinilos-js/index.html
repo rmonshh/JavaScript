@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SURCO — Discos de vinilo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo">SUR<span>C</span>O</div>
+    <nav class="links">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-btn" id="cartToggle" aria-label="Abrir cesta">
+      Cesta <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center;">
+    <div class="hero-copy">
+      <p class="kicker">Tienda de vinilos independiente</p>
+      <h1>Discos que se sienten,<br>no solo se escuchan.</h1>
+      <p class="lede">Seleccionamos ediciones de sello pequeño y prensajes cuidados, para quienes prefieren bajar la aguja antes que pulsar reproducir.</p>
+      <div>
+        <button class="btn-primary" data-scroll="catalogo">Explorar catálogo</button>
+        <button class="btn-ghost" data-scroll="nosotros">Cómo elegimos los discos</button>
+      </div>
+    </div>
+    <div class="disc-stage">
+      <div class="disc"></div>
+    </div>
+  </div>
+</section>
+
+<div class="groove"></div>
+
+<section class="catalog" id="catalogo">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <h2>La selección de este mes</h2>
+        <p>Seis prensajes que están rotando en la tienda ahora mismo, elegidos por el equipo.</p>
+      </div>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="chip active" data-genre="todos">Todos</button>
+      <button class="chip" data-genre="electronica">Electrónica</button>
+      <button class="chip" data-genre="rock">Rock</button>
+      <button class="chip" data-genre="jazz">Jazz</button>
+      <button class="chip" data-genre="folk">Folk</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="about" id="nosotros">
+  <div class="wrap about-inner">
+    <div class="crate">
+      <div class="row">
+        <div class="slab"></div><div class="slab"></div><div class="slab"></div>
+        <div class="slab"></div><div class="slab"></div><div class="slab"></div>
+      </div>
+    </div>
+    <div class="about-copy">
+      <h2>Cada disco pasa por nuestras manos antes de llegar a las tuyas</h2>
+      <p>Escuchamos cada prensaje entero antes de ponerlo en la tienda. Trabajamos con sellos pequeños y distribuidoras que cuidan el vinilo, revisamos el estado de cada copia y guardamos el stock en un local con humedad controlada.</p>
+      <p>Si un disco no suena como debería, lo retiramos. Preferimos tener menos referencias y que todas merezcan la pena.</p>
+      <div class="stats">
+        <div class="stat"><div class="num">340+</div><div class="label">referencias activas</div></div>
+        <div class="stat"><div class="num">18</div><div class="label">sellos independientes</div></div>
+        <div class="stat"><div class="num">6</div><div class="label">años en el barrio</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="groove"></div>
+
+<footer id="contacto">
+  <div class="wrap footer-inner">
+    <div>
+      <h3>SURCO</h3>
+      <p>Calle Mayor 14, local 2. Abrimos de martes a sábado, de 11:00 a 20:30.</p>
+      <div class="newsletter">
+        <input type="email" placeholder="Tu correo" aria-label="Correo electrónico">
+        <button data-toast="Te avisaremos de las próximas llegadas">Recibir novedades</button>
+      </div>
+    </div>
+    <div>
+      <h3>Tienda</h3>
+      <ul>
+        <li><a href="#catalogo">Catálogo completo</a></li>
+        <li><a href="#nosotros">Nuestra selección</a></li>
+        <li><a href="#">Encargos especiales</a></li>
+        <li><a href="#">Vender tu colección</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <ul>
+        <li><a href="mailto:hola@surco-discos.com">hola@surco-discos.com</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Boletín semanal</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap fine-print">
+    <span>© 2026 Surco. Proyecto de portfolio, tienda ficticia.</span>
+    <span>Diseñado y construido a mano.</span>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Cesta de la compra">
+  <div class="drawer-head">
+    <h2>Tu cesta</h2>
+    <button class="drawer-close" id="drawerClose" aria-label="Cerrar cesta">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Total</span><span id="cartTotal">0,00 €</span></div>
+    <button class="checkout-btn" id="checkoutBtn" disabled>Finalizar pedido</button>
+    <p class="checkout-note">Proyecto de demostración: no se procesan pagos reales.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
