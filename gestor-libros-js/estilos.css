@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f6f1e9;     
+  color: #2b2622;
+  padding: 50px 6%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.6rem;
+}
+
+.contador {
+  color: #7a6f66;
+  margin: 8px 0 30px;
+}
+
+.contador span {
+  color: #c8553d;
+  font-weight: 600;
+}
+
+/* ===== FORMULARIO ===== */
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #e6dccd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  flex: 1;
+  min-width: 150px;
+}
+
+form button {
+  background: #2b2622;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #c8553d;
+}
+
+/* ===== TARJETAS ===== */
+#lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.libro {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(60, 40, 20, 0.08);
+}
+
+.portada {
+  height: 150px;
+  padding: 16px;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.info {
+  padding: 14px 16px;
+}
+
+.info p {
+  color: #7a6f66;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.info button {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e6dccd;
+  border-radius: 10px;
+  background: white;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Cuando el libro está leído el botón es verde */
+.info button.leido {
+  background: #4f7a5a;
+  color: white;
+  border-color: #4f7a5a;
+}
