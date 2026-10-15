@@ -1,0 +1,67 @@
+:root {
+  --bg: #eef0f6;
+  --caja: #1B1E2B;
+  --texto: #E8EAF5;
+  --gris: #6b7190;
+  --borde: #dde0ec;
+  --acento: #3346d3;
+}
+
+body {
+  background: #12141F;
+  color: #E8EAF5;
+  font-family: "Figtree", system-ui, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 40px 16px;
+}
+
+.app { max-width: 500px; margin: 0 auto; }
+
+h1 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 2.4rem;
+  margin: 0 0 20px;
+}
+h1 span { color: var(--acento); }
+
+form { display: flex; gap: 8px; margin-bottom: 16px; }
+
+input {
+  flex: 1;
+  font: inherit;
+  color: var(--texto);
+  background: var(--caja);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+button { font: inherit; cursor: pointer; }
+
+.btn-add {
+  background: var(--acento);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+}
+
+ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--caja);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+li span { flex: 1; cursor: pointer; }
+li.hecha span { text-decoration: line-through; color: var(--gris); }
+
+.borrar { background: none; border: none; color: var(--gris); font-size: 20px; }
+
+.contador { color: var(--gris); font-size: 14px; margin-top: 16px; }
